@@ -7,6 +7,8 @@ import { StoreModule } from '@ngrx/store';
 import { carReducer } from './car/car.reducer';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { CarEffects } from './car/car.effects';
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     StoreModule.forRoot({ car: carReducer }),
     HttpClientModule,
+    EffectsModule.forRoot([CarEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
