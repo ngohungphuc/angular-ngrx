@@ -18,7 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     StoreModule.forRoot({ car: carReducer }),
     HttpClientModule,
-    StoreDevtoolsModule.instrumentOnlyWithExtension({
+    StoreDevtoolsModule.instrument({
       maxAge: 5
     })
   ],
